@@ -11,6 +11,14 @@
         "Websockets",
         "Socket.io"
     ],
+    "homepage": "https://github.com/codeston/node-chatapp",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/codeston/node-chatapp"
+    },
+    "bugs": {
+        "url": "https://github.com/codeston/node-chatapp/issues"
+    },
     "author": "Younes Ghorbany",
     "license": "ISC",
     "dependencies": {
