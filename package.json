@@ -1,0 +1,21 @@
+{
+    "name": "websockets",
+    "version": "1.0.0",
+    "description": "Simple chat application with socket.io",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+    "keywords": [
+        "Chat Application",
+        "Websockets",
+        "Socket.io"
+    ],
+    "author": "Younes Ghorbany",
+    "license": "ISC",
+    "dependencies": {
+        "bootstrap-v4-rtl": "^4.6.0-2",
+        "express": "^4.17.1",
+        "socket.io": "^4.1.3"
+    }
+}
