@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "persian01";
+    src: url("../fonts/IH-Pe.eot");
+    src: url("../fonts/IH-Pe.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/IH-Pe.woff2") format("woff2"),
+        url("../fonts/IH-Pe.woff") format("woff"),
+        url("../fonts/IH-Pe.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "persian02";
+    src: url("../fonts/BYekan-webfont.eot") format("eot"),
+        url("../fonts/BYekan-webfont.woff") format("woff"),
+        url("../fonts/BYekan-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "persian02", tahoma;
+    background: #f4f5fb;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* .container-fluid {
+    height: 100vh !important;
+} */

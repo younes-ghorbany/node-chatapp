@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>اپلیکیشن چت</title>
+    </head>
+    <body class="rtl">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- <div class="col-3 bg-warning">
+                    <div>
+                        <div class="alert alert-info text-center">
+                            <span class="text-center"> کاربران آنلاین</span>
+                        </div>
+                        <ul id="online-users-list" class="">
+                            <li>
+                                <span class="name">یونس قربانی</span>
+                            </li>
+                 </ul>
+                    </div>
+                </div> -->
+
+                <div
+                    class="col-12 bg-info h-100"
+                    style="position: absolute; overflow-y: scroll"
+                >
+                    <ul id="chat-box" class="mt-2 list-unstyled">
+                        <li class="alert alert-light">
+                            <span
+                                class="text-dark font-weight-normal"
+                                style="font-size: 13pt"
+                                >یونس قربانی</span
+                            >
+                            <span
+                                class="
+                                    text-muted
+                                    font-italic font-weight-light
+                                    m-2
+                                "
+                                style="font-size: 9pt"
+                                >ساعت 12:00</span
+                            >
+                            <p
+                                class="alert alert-info mt-2"
+                                style="font-family: persian01"
+                            >
+                                این این متن پیام تست است
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-center fixed-bottom">
+                        <form class="form-group w-50 mb-0">
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    name="message"
+                                    id="messageInput"
+                                    class="form-control"
+                                    placeholder="متن پیام..."
+                                />
+                                <div class="input-group-prepend">
+                                    <button
+                                        id="sendMessage"
+                                        type="submit"
+                                        class="form-control btn btn-primary"
+                                    >
+                                        ارسال پیام
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

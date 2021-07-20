@@ -22,7 +22,6 @@
     "author": "Younes Ghorbany",
     "license": "ISC",
     "dependencies": {
-        "bootstrap-v4-rtl": "^4.6.0-2",
         "express": "^4.17.1",
         "socket.io": "^4.1.3"
     }
