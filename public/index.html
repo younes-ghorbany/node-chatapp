@@ -28,32 +28,10 @@
                     class="col-12 bg-info h-100"
                     style="position: absolute; overflow-y: scroll"
                 >
-                    <ul id="chat-box" class="mt-2 list-unstyled">
-                        <li class="alert alert-light">
-                            <span
-                                class="text-dark font-weight-normal"
-                                style="font-size: 13pt"
-                                >یونس قربانی</span
-                            >
-                            <span
-                                class="
-                                    text-muted
-                                    font-italic font-weight-light
-                                    m-2
-                                "
-                                style="font-size: 9pt"
-                                >ساعت 12:00</span
-                            >
-                            <p
-                                class="alert alert-info mt-2"
-                                style="font-family: persian01"
-                            >
-                                این این متن پیام تست است
-                            </p>
-                        </li>
-                    </ul>
+                    <ul id="chat-box" class="mt-2 list-unstyled"></ul>
+                    <div id="feedback"></div>
                     <div class="d-flex justify-content-center fixed-bottom">
-                        <form class="form-group w-50 mb-0">
+                        <form id="chatForm" class="form-group w-50 mb-0">
                             <div class="input-group">
                                 <input
                                     type="text"
@@ -64,7 +42,6 @@
                                 />
                                 <div class="input-group-prepend">
                                     <button
-                                        id="sendMessage"
                                         type="submit"
                                         class="form-control btn btn-primary"
                                     >
@@ -77,5 +54,8 @@
                 </div>
             </div>
         </div>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/socket.io.min.js"></script>
+        <script src="js/chat.js"></script>
     </body>
 </html>
