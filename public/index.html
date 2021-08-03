@@ -2,60 +2,40 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <link rel="stylesheet" href="css/font-awesome.min.css" />
         <link rel="stylesheet" href="css/bootstrap-rtl.min.css" />
         <link rel="stylesheet" href="css/styles.css" />
-        <title>اپلیکیشن چت</title>
+        <title>ورود به چت</title>
     </head>
-    <body class="rtl">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- <div class="col-3 bg-warning">
-                    <div>
-                        <div class="alert alert-info text-center">
-                            <span class="text-center"> کاربران آنلاین</span>
-                        </div>
-                        <ul id="online-users-list" class="">
-                            <li>
-                                <span class="name">یونس قربانی</span>
-                            </li>
-                 </ul>
-                    </div>
-                </div> -->
+    <body class="rtl text-center">
+        <form id="nicknameForm" class="form-signin">
+            <h1 class="h3 mb-3 font-weight-normal">
+                لطفاً نام کاربری خود را وارد کنید
+            </h1>
+            <label for="inputEmail" class="sr-only">نام کاربری</label>
+            <input
+                type="text"
+                name="nickname"
+                id="nicknameInput"
+                class="form-control"
+                placeholder="نام کاربری"
+                required
+                autofocus
+            />
+            <button class="mt-3 btn-lg btn-primary btn-block" type="submit">
+                ورود به چت
+            </button>
+        </form>
+        <script>
+            const nicknameForm = document.getElementById("nicknameForm"),
+                nicknameInput = document.getElementById("nicknameInput");
 
-                <div
-                    class="col-12 bg-info h-100"
-                    style="position: absolute; overflow-y: scroll"
-                >
-                    <ul id="chat-box" class="mt-2 list-unstyled"></ul>
-                    <div id="feedback"></div>
-                    <div class="d-flex justify-content-center fixed-bottom">
-                        <form id="chatForm" class="form-group w-50 mb-0">
-                            <div class="input-group">
-                                <input
-                                    type="text"
-                                    name="message"
-                                    id="messageInput"
-                                    class="form-control"
-                                    placeholder="متن پیام..."
-                                />
-                                <div class="input-group-prepend">
-                                    <button
-                                        type="submit"
-                                        class="form-control btn btn-primary"
-                                    >
-                                        ارسال پیام
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/socket.io.min.js"></script>
-        <script src="js/chat.js"></script>
+            nicknameForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                if (nicknameInput.value) {
+                    localStorage.setItem("nickname", nicknameInput.value);
+                    window.location.replace("/chat.html");
+                }
+            });
+        </script>
     </body>
 </html>

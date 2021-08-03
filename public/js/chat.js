@@ -4,9 +4,15 @@ const socket = io();
 const messageInput = document.getElementById("messageInput"),
     chatForm = document.getElementById("chatForm"),
     chatBox = document.getElementById("chat-box"),
-    feedback = document.getElementById("feedback");
+    feedback = document.getElementById("feedback"),
+    onlineUsers = document.getElementById("online-users-list");
 
 // Emit event
+
+const nickname = localStorage.getItem("nickname");
+
+socket.emit("login", { nickname });
+
 chatForm.addEventListener("submit", (e) => {
     e.preventDefault();
     if (messageInput.value) {
@@ -22,6 +28,16 @@ messageInput.addEventListener("keypress", () => {
 });
 
 // Listen for events
+
+socket.on("online", (data) => {
+    Object.values(data).forEach((value) => {
+        onlineUsers.innerHTML += `
+        <li class="alert alert-light p-1 mx-2">
+            ${value}
+            <span class="badge badge-success">آنلاین</span>
+        </li>`;
+    });
+});
 
 socket.on("typing", (data) => {
     feedback.innerHTML = `<p class="alert alert-warning w-25"><em>${data.name} در حال نوشتن هست...</em></p>`;

@@ -17,12 +17,22 @@ server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
+const users = {};
+
 // Setup websocket
 io.on("connection", (socket) => {
-    console.log(`User connected.`);
-
     // Listen
-    socket.on("disconnect", () => console.log(`User disconnected.`));
+
+    socket.on("login", (data) => {
+        console.log(`${data.nickname} connected.`);
+        users[socket.id] = data.nickname;
+        io.sockets.emit("online", users);
+    });
+
+    socket.on("disconnect", () => {
+        console.log(`${users[socket.id]} disconnected.`);
+        delete users[socket.id];
+    });
 
     socket.on("chat message", (data) => {
         io.sockets.emit("chat message", data);
